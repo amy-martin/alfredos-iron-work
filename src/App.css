@@ -1,7 +1,9 @@
 *, html {
     box-sizing: border-box;
-    color: rgb(43, 58, 85);
+    color: white;
     margin: 0;
+    font-family: Lato, Geneva, Tahoma, sans-serif;
+
 
 }
 html {
@@ -10,25 +12,29 @@ html {
     padding: 0;
     width: 100%;
     height: 100%;
-    background-image: url('./media/background.png');
+  }
+
+body {
+    margin:0;
+    padding:0;
+}
+.background {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgb(43, 58, 85, .75), rgb(43, 58, 85, .75)), url("../src/media/background.png");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
-  }
-body {
-    background-color: rgb(43, 58, 85, .75);
-    
-    margin: 0;
-    font-family: Lato, Geneva, Tahoma, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    overflow: scroll;
 }
 
+
 nav {
+    
     position: fixed;
     width: 100%;
     height: 220px;
@@ -61,6 +67,7 @@ nav ul {
 }
 nav ul li a {
     text-decoration: none;
+    color: rgb(43, 58, 85)
 }
 
 nav ul li a:hover {
@@ -70,8 +77,20 @@ nav ul li a:hover {
 main {
     position: absolute;
     top: 220px;
-
+    width: 100%;
     
 }
 
-    
+.home-page.components {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+h3.title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px
+}
