@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+  }
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #dae0e6;
+    display: flex;
+    flex-direction: column;
+    
+  
+  }
+main {
+    position: relative;
+    top: 55px;
+    color: black;
+    
+  }
+    
