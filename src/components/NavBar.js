@@ -5,7 +5,10 @@ export const NavBar = () => {
     return (
         <header>
             <nav className="wide-screen navbar">
-                <img src={require('../media/aiw-logo.png')}/>
+                <div className="brand-name">
+                    <img src={require('../media/welding-man.png')}/>
+                    <h1>Alfredo's</h1><h3>IRON WORK</h3>
+                </div>
                 <ul>
                     <li><NavLink>HOME</NavLink></li>
                     <li><NavLink>SERVICES</NavLink></li>

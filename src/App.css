@@ -12,6 +12,7 @@ html {
     padding: 0;
     width: 100%;
     height: 100%;
+    min-width: 300px;
   }
 
 body {
@@ -32,41 +33,63 @@ body {
     overflow: scroll;
 }
 
+main {
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    height: calc(100% - 150px);
+    min-height: calc(800px - 150px);
+    
+}
+
+/* NAVBAR STYLING */
 
 nav {
     
     position: fixed;
     width: 100%;
-    height: 220px;
+    height: 150px;
     background-color: white;
     z-index: 5;
-}
-
-nav img {
-    height: 200px;
-    width: auto;
-    margin: 10px;
-    margin-left: 30px;
-}
-
-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+nav img {
+    padding-left:20px;
+    height: 130px;
+    width: auto;
+}
+
+
+.brand-name {
+    display: flex;
+    align-items: center;
+
+}
+
+.brand-name h1 {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    padding-right:10px;
+    font-size: 60px;
+}
+.brand-name h1, .brand-name h3{
+    color: rgb(43, 58, 85);
+
+}
+
 nav ul {
-    width:35%;
     min-width: 500px; 
     margin: 10px;
     margin-right: 30px;
     list-style-type: none;
     display: flex;
-    justify-content: space-evenly;
-
+    justify-content: space-between;
 }
 nav ul li a {
     text-decoration: none;
+    padding: 20px;
     color: rgb(43, 58, 85)
 }
 
@@ -74,23 +97,106 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-main {
-    position: absolute;
-    top: 220px;
-    width: 100%;
-    
-}
 
+/* HOME PAGE STYLING */
 .home-page.components {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 40px;
+
+    align-items: center;
+}
+
+h3.home-page.title {
+    text-align: center;
+    font-weight: 800;
+    font-size: 25px;
+    padding: 90px;
+    height:auto;
+}
+
+/* SECONDARY COMPONENTS STYLING */
+
+.home-page.secondary-components {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     justify-content: center;
     align-items: center;
 }
 
-h3.title {
+.home-page.secondary-components >* {
+    margin: 15px;
+    max-width: 600px;
+    height: 600px;
+}
+/* WHY US STYLING */
+
+.home-page.secondary-components ul {
+    list-style: none;
+    width: 100%;
+    height: 600px;
+}
+
+.why-us-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.why-us-list-content {
+    width: auto;
+    display: flex;
+    align-items: center;
+    font-size: 17.5px;
+}
+
+.why-us-list-content img{
+    width: 75px;
+}
+
+.why-us-list-content p {
+    width: auto
+}
+
+/* ESTIMATE INQUIRY FORM */
+
+.estimate-inquiry {
+    height: 600px;
+    background-color: rgb(255, 255, 255, 85%);
+    border-radius: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.estimate-inquiry h2 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+}
+.estimate-inquiry h2, .estimate-inquiry h4 {
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: center;
-    font-weight: 600;
-    font-size: 20px
+}
+
+.estimate-inquiry h4 {
+    padding-bottom: 40px;
+}
+
+.estimate-inquiry h4, .estimate-inquiry h2, label{
+    color: rgb(43, 58, 85);
+    font-weight: 400;
+}
+.form-elements {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+.form-element{
+
+    padding: 20px;
 }
