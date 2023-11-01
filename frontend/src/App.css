@@ -126,18 +126,20 @@ nav ul li a:hover {
 
 /* HOME PAGE STYLING */
 .home-page.components {
-    height: 100%;
     display: flex;
     flex-direction: column;
-
     align-items: center;
 }
 
 h3.home-page.title {
+    min-width: 300px;
+    width: 100%;
     text-align: center;
-    font-weight: 800;
+    font-weight: 600;
     font-size: 25px;
-    padding: 90px;
+    padding: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     height:auto;
 }
 
@@ -207,7 +209,7 @@ h3.home-page.title {
 /* ESTIMATE INQUIRY FORM */
 
 .estimate-inquiry {
-    margin:10px;
+    margin-bottom: 20px;
     min-height: 750px;
     height: 750px;
     background-color: rgb(255, 255, 255, 85%);
@@ -269,7 +271,9 @@ input, select, textarea {
     border-radius: 5px;
 }
 
-
+textarea {
+    resize: none;
+}
 
 input[type="text"],
 input[type="tel"],

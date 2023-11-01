@@ -21,7 +21,18 @@ export const EstimateInquiryForm = () => {
                     </div>
                     <div className="form-element">
                         <label for='service'>Service Needed:</label>
-                        <select type='text' name='service' id='service' required></select>
+                        <select type='text' name='service' id='service' required>
+                            <option disabled selected value="">Select an option</option>
+                            <option value="">Balcony</option>
+                            <option value="">Railing</option>
+                            <option value="">Gate/Fence</option>
+                            <option value="">Grille/Security Bars</option>
+                            <option value="">Furniture/Decorative</option>
+                            <option value="">Signage</option>
+                            <option value="">Landscape</option>
+                            <option value="">Restoration/Repair</option>
+                            <option value="">Custom/Other</option>
+                        </select>
                     </div>
                     <div className="form-element">
                         <label for='additional-details'>Additional Details:</label>
