@@ -33,7 +33,7 @@ body {
     background-position: center center;
     overflow: scroll;
 }
-
+ 
 main {
     position: absolute;
     top: 150px;
@@ -162,10 +162,11 @@ h3.home-page.title {
 }
 /* WHY US STYLING */
 
-.home-page.secondary-components ul {
+.secondary-components ul {
     list-style: none;
     width: 100%;
     height: 600px;
+    
 }
 
 .why-us-list {
@@ -174,20 +175,33 @@ h3.home-page.title {
     flex-direction: column;
     justify-content: space-between;
 }
+
 .why-us-list-content {
+    height: 150px;
+    cursor: default;
+}
+.baseline-content {
     width: auto;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     font-size: 17.5px;
+    margin-bottom: 5px;
+    text-decoration: underline;
 }
-
-.why-us-list-content img{
-    width: 75px;
+.baseline-content:hover {
+    text-decoration: none;
 }
-
-.why-us-list-content p {
-    width: auto
+.reason-excerpt{
+    margin-left: 50px;
+    font-weight: 300;
+}
+.icon-container {
+    width: 50px;
+}
+.icon-container img{
+    height: 35px;
+    margin-right: 10px;
+    float: right;
 }
 
 /* ESTIMATE INQUIRY FORM */
