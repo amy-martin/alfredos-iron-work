@@ -311,4 +311,36 @@ button[type="submit"] {
   }
   
 
-    
+/* CONTACT US PAGE STYLING */
+
+.contact-us {
+
+}
+
+.contact-us .general-content {
+    text-align: center;
+}
+
+.contact-us .general-content h3 {
+    min-width: 300px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 25px;
+    padding: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    height:auto;
+}
+.contact-us .general-content h5
+.contact-us ul {
+    list-style: none;
+    margin: 40px;
+}
+
+.contact-us .estimate-inquiry-form {
+    text-align: left;
+    width: 420px;
+    min-width: 300px;
+    padding: 30px;
+}
