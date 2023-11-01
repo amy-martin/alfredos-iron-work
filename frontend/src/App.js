@@ -4,6 +4,9 @@ import './App.css';
 
 import { NavBar } from './components/navBarComponents/NavBar';
 import { HomePage } from './components/homePageComponents/HomePage';
+import ContactUs from './components/contactUsComponents/ContactUs';
+import { AboutUs } from './components/aboutUsComponents/AboutUs';
+import { Services } from './components/servicesComponents/Services';
 
 const App = () => {
   return (
@@ -14,9 +17,9 @@ const App = () => {
         {/* <NavBarSideBar /> */}
         <Routes>
           <Route path='/' element={<HomePage />}/>
-          {/* <Route path='/services' element={<Services />}/> */}
-          {/* <Route path='/about' element={<AboutUs />}/> */}
-          {/* <Route path='/contact' element={<ContactUs />}/> */}
+          <Route path='/services' element={<Services />}/>
+          <Route path='/about-us' element={<AboutUs />}/>
+          <Route path='/contact-us' element={<ContactUs />}/>
         </Routes>
       </main>
     </Router>
