@@ -30,7 +30,7 @@ export const WhyUs = () => {
         {
             reason: 'Artistry and Innovation',
             imgSrc: require('../../../media/artistry-and-innovation.png'),
-            reasonExcerpt: "At Alfredo's Iron Work, we blend traditional craftsmanship with modern innovation, creating ironwork that seamlessly combines the best of both worlds."
+            reasonExcerpt: "At Alfredo's Ironwork, we blend traditional craftsmanship with modern innovation, creating ironwork that seamlessly combines the best of both worlds."
         },
         {
             reason: 'Fair and Transparent Pricing',
