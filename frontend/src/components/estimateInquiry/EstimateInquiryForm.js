@@ -4,6 +4,7 @@ import { serverAddress } from "../../App";
 
 export const EstimateInquiryForm = () => {
 
+    // HANDLE SUCCESS WITH FLASH MESAGE
     
     const [formData, setFormData] = useState({
         name: '',
@@ -13,7 +14,7 @@ export const EstimateInquiryForm = () => {
         additionalDetails: '',
     });
     const handleChange = (e) => {
-        // Update the state when form fields change
+        e.preventDefault();
         const { name, value } = e.target;
         setFormData({
           ...formData,
@@ -21,7 +22,8 @@ export const EstimateInquiryForm = () => {
         });
       };
     
-    const onSubmit = async () => {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
         const options = {
             method: 'POST',
             mode: 'cors',
@@ -38,7 +40,7 @@ export const EstimateInquiryForm = () => {
         console.log(response)
     }
     return (
-            <form className="estimate-inquiry-form" onSubmit={onSubmit}>
+            <form className="estimate-inquiry-form" onSubmit={handleSubmit}>
                 <div className="form-elements">
                     <div className="form-element">
                         <label for='name'>Full Name:</label>
@@ -56,20 +58,20 @@ export const EstimateInquiryForm = () => {
                         <label for='service'>Service Needed:</label>
                         <select type='text' name='service' id='service' required onChange={handleChange}>
                             <option disabled selected value="">Select an option</option>
-                            <option value="">Balcony</option>
-                            <option value="">Railing</option>
-                            <option value="">Gate/Fence</option>
-                            <option value="">Grille/Security Bars</option>
-                            <option value="">Furniture/Decorative</option>
-                            <option value="">Signage</option>
-                            <option value="">Landscape</option>
-                            <option value="">Restoration/Repair</option>
-                            <option value="">Custom/Other</option>
+                            <option value="Balcony">Balcony</option>
+                            <option value="Railing">Railing</option>
+                            <option value="Gate/Fence">Gate/Fence</option>
+                            <option value="Grille/Security Bars">Grille/Security Bars</option>
+                            <option value="Furniture/Decorative">Furniture/Decorative</option>
+                            <option value="Signage">Signage</option>
+                            <option value="Landscape">Landscape</option>
+                            <option value="Repair">Repair</option>
+                            <option value="Custom/Other">Custom/Other</option>
                         </select>
                     </div>
                     <div className="form-element">
                         <label for='additional-details'>Additional Details:</label>
-                        <textarea type='text' name='additional-details' id='additional-details' rows='3' cols='50' required onChange={handleChange}/>
+                        <textarea type='text' name='additionalDetails' id='additionalDetails' rows='3' cols='50' onChange={handleChange}/>
                     </div>
                 </div>
                 <button type="submit">Send Inquiry</button>

@@ -31,8 +31,8 @@ app.post('/submit-inquiry', (req, res) => {
         from: 'client@alfredosironwork.com',
         to: 'info@alfredosironwork.com',
         cc: email,
-        subject: 'Estimate Inquiry Successfully Submitted',
-        text: `The following inquiry was successfully sent. Thank you for your interest! Please allow one to two days for one of our associates to contact you and schedule a visit.\n\nAlfredo's Ironwork\n\n\n\n--------------------------------------------------------------------------\n\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nService Needed: ${service}\nAdditional Details: ${additionalDetails}`
+        subject: `${name} - Estimate Inquiry Successfully Submitted`,
+        text: `Hello ${name},\n\n\nYour inquiry was received. Thank you for your interest! Please allow one to two days for one of our associates to contact you and schedule a visit.\n\n\nAlfredo's Ironwork\n\n\n--------------------------------------------------------------------------\n\n\nSubmmitted Inquiry:\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nService Needed: ${service}\nAdditional Details: ${additionalDetails}`
     }
     transporter.sendMail(mailOptions, (err, info) => {
         if (err) {
@@ -40,7 +40,7 @@ app.post('/submit-inquiry', (req, res) => {
             res.status(500).send('Error sending email');
         } else {
             console.log('Email send: ' + info.response);
-            res.send('Email sent successfully')
+            res.status(200).send('Email sent successfully')
         }
     })
 })
