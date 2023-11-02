@@ -8,6 +8,14 @@ import ContactUs from './components/contactUsComponents/ContactUs';
 import { AboutUs } from './components/aboutUsComponents/AboutUs';
 import { Services } from './components/servicesComponents/Services';
 
+
+import dotenv from 'dotenv';
+dotenv.config();
+
+
+export const serverAddress = process.env.REACT_APP_SERVER_ADDRESS
+
+
 const App = () => {
   return (
     <Router>

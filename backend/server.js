@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const nodemailer = require('nodemailer');
-
+const cors = require('cors');
 
 require('dotenv').config();
 const port = process.env.PORT || 3000;
@@ -10,7 +10,12 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
+app.use(cors({
+    origin: ['http://localhost:3000', 'http://localhost:3001', 'https://alfredos-iron-work.onrender.com'],
+    credentials: true,
+    methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD', 'DELETE']
 
+}))
 app.post('/submit-inquiry', (req, res) => {
     const {name, email, service, message} = req.body;
     const transporter = nodemailer.createTransport({
@@ -41,5 +46,5 @@ app.post('/submit-inquiry', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`App listening at port ${port}`)
+    console.log(`App running on port ${port}`)
 })

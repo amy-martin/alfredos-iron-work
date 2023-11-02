@@ -1,6 +1,23 @@
 import React from "react";
+import { serverAddress } from "../../App";
 
 export const EstimateInquiryForm = () => {
+    
+    const onSubmit = async () => {
+        const options = {
+            method: 'POST',
+            mode: 'cors',
+            credentials: 'include',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+
+            })
+        }
+        await fetch(`${serverAddress}/submit-inquiry`, )
+    }
     return (
             <form className="estimate-inquiry-form" >
                 <div className="form-elements">
