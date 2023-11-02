@@ -34,7 +34,8 @@ export const EstimateInquiryForm = () => {
                 formData
             })
         }
-        await fetch(`${serverAddress}/submit-inquiry`, )
+        const response = await fetch(`${serverAddress}/submit-inquiry`, options);
+        console.log(response)
     }
     return (
             <form className="estimate-inquiry-form" onSubmit={onSubmit}>
