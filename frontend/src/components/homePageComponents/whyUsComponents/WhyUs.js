@@ -40,6 +40,7 @@ export const WhyUs = () => {
     ]
     return (
         <ul className="why-us-list">
+            <h2 className="why-us-title">WHAT SETS US APART</h2>
             {reasons.map(reason => {
                 return <WhyUsReasonTile reason={reason} key={Math.floor(Math.random() * (100 - 1 + 1) + 1)}/>
             })}

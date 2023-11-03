@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import { serverAddress } from "../../App";
+import { Flash } from "./flashComponents/Flash";
+import { SubmitInquiryButton } from "./SubmitInquiryButton";
+import { useDispatch } from "react-redux";
+import { reset, sendEmail, setToLoading } from "../../slices/submitInquirySlice";
+import { setFlash } from "../../slices/flashSlice";
 
 
 export const EstimateInquiryForm = () => {
-
-    // HANDLE SUCCESS WITH FLASH MESAGE
-    
+    const dispatch = useDispatch()
+    // const [submitButtonContent, setSubmitButtonContent] = useState('Send Inquiry')
+    // const [displayFlash, setDisplayFlash] = useState(false);
+    // const [flashMessage, setFlashMessage] = useState()
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
@@ -20,42 +26,38 @@ export const EstimateInquiryForm = () => {
           ...formData,
           [name]: value,
         });
-      };
+    };
     
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        const options = {
-            method: 'POST',
-            mode: 'cors',
-            credentials: 'include',
-            headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                formData
-            })
+        try {
+            e.preventDefault();
+            dispatch(sendEmail(formData))
+        } catch (e) {
+            throw e
         }
-        const response = await fetch(`${serverAddress}/submit-inquiry`, options);
-        console.log(response)
+        
+
+        //POSSIBLY ADD LOADING SCREEN MEANTIME EMAIL SENDS AND YOU GET A RESPONSE
     }
+
+    // MAKE THE DUBMIT BUTTON ITS OWN COMPONENT
     return (
             <form className="estimate-inquiry-form" onSubmit={handleSubmit}>
                 <div className="form-elements">
                     <div className="form-element">
-                        <label for='name'>Full Name:</label>
+                        <label htmlFor='name'>Full Name:</label>
                         <input type='text' name='name' id='name' required onChange={handleChange} />
                     </div>
                     <div className="form-element">
-                        <label for='phone'>Phone:</label>
-                        <input type='tel' name='phone' id='phone' required onChange={handleChange} />
+                        <label htmlFor='phone'>Phone:</label>
+                        <input type="number" inputmode="numeric" pattern="[0-9]*" name='phone' id='phone' required onChange={handleChange} />
                     </div>
                     <div className="form-element">
-                        <label for='email'>Email:</label>
+                        <label htmlFor='email'>Email:</label>
                         <input type='email' name='email' id='email' required onChange={handleChange} />
                     </div>
                     <div className="form-element">
-                        <label for='service'>Service Needed:</label>
+                        <label htmlFor='service'>Service Needed:</label>
                         <select type='text' name='service' id='service' required onChange={handleChange}>
                             <option disabled selected value="">Select an option</option>
                             <option value="Balcony">Balcony</option>
@@ -70,11 +72,12 @@ export const EstimateInquiryForm = () => {
                         </select>
                     </div>
                     <div className="form-element">
-                        <label for='additional-details'>Additional Details:</label>
+                        <label htmlFor='additional-details'>Additional Details:</label>
                         <textarea type='text' name='additionalDetails' id='additionalDetails' rows='3' cols='50' onChange={handleChange}/>
                     </div>
                 </div>
-                <button type="submit">Send Inquiry</button>
+                <Flash />
+                <SubmitInquiryButton />
             </form>
 )
 }
