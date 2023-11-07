@@ -6,7 +6,7 @@ function ContactUs() {
 
   const estimateFormDescription = (
       <div className="estimate-description">
-          <h2 className="estimate-descrition-title">Estimate Inquiries:</h2>
+          <h2 className="estimate-description-title">Estimate Inquiries:</h2>
           <h4>To set up your complimentary estimate within the greater Los Angeles area, please submit the following form:</h4>
       </div>
   )
