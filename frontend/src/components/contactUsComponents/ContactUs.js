@@ -5,8 +5,8 @@ import { EstimateInquiryForm } from "../estimateInquiry/EstimateInquiryForm";
 function ContactUs() {
 
   const estimateFormDescription = (
-      <div className="estimate-discription">
-          <h2>Estimate Inquiries:</h2>
+      <div className="estimate-description">
+          <h2 className="estimate-descrition-title">Estimate Inquiries:</h2>
           <h4>To set up your complimentary estimate within the greater Los Angeles area, please submit the following form:</h4>
       </div>
   )
