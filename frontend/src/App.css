@@ -176,236 +176,230 @@ nav ul li a:hover {
 
 @media not screen and (max-height: 800px) and (max-width: 1500px) {
 
-/* SECONDARY COMPONENTS STYLING */
-.home-page.secondary-components {
-    min-width:300px;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap ;
-    justify-content: center;
-    align-items: center;
-}
+    /* SECONDARY COMPONENTS STYLING */
+    .home-page.secondary-components {
+        min-width:300px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap ;
+        justify-content: center;
+        align-items: center;
+    }
 
-.home-page.secondary-components >* {
+    .home-page.secondary-components >* {
+        
+        max-width: 600px;
+        min-height: 750px;
+        height: 750px;
+        min-width: 300px;
+    }
+
+    /* WHY US STYLING */
+
+    .secondary-components ul {
+        list-style: none;
+        width: 100%;
+        height: 600px;
+        
+    }
+
+    .why-us-title {
+        text-align: center;
+        font-weight: 400;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .why-us-list {
+        min-width:300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .why-us-list-content {
+        height: 125px;
+        cursor: default;
+    }
+    .baseline-content {
+        width: auto;
+        display: flex;
+        align-items: center;
+        font-size: 17.5px;
+        
+        text-decoration: underline;
+    }
+    .baseline-content:hover {
+        text-decoration: none;
+    }
+    .reason-excerpt{
+        margin-left: 50px;
+        font-weight: 300;
+    }
+    .icon-container {
+        width: 50px;
+    }
+    .icon-container img{
+        height: 35px;
+        margin-right: 10px;
+        float: right;
+    }
+
+
+    /* ESTIMATE INQUIRY FORM */
+
+    .estimate-inquiry {
+        margin-bottom: 20px;
+        min-height: 750px;
+        height: 750px;
+        background-color: rgb(255, 255, 255, 85%);
+        border-radius: 25px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+    }
+    .estimate-inquiry h2 {
+        padding-top: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+    }
+    .estimate-inquiry h4 {
+        padding-bottom: 20px;
+    }
+    .estimate-inquiry h2, .estimate-inquiry h4, .general-content h2, .general-content h4, .general-content ul li{
+        color: rgb(43, 58, 85);
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: center;
+        font-weight: 400;
+    }
+    .estimate-inquiry-form {
+        background-color: #f7f7f7;
+        padding: 20px;
+        border-radius: 10px;
+        min-width: 225px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .form-elements {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-element {
+        margin-bottom: 20px;
+    }
+
+    label {
+        padding-bottom: 2.5px;
+        font-weight: bold;
+        display: block;
+        color: rgb(43, 58, 85);
+        font-weight: 400;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        color: rgba(43, 58, 85, 0.771);
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    select {
+        font-size: 16px;
+    }
+
+    input[type="text"]:focus,
+    input[type="tel"]:focus,
+    select:focus {
+        border: 1px solid rgba(43, 58, 85, 0.808);
+        outline: none;
+    }
+
+
+    input[type="text"]:required:valid,
+    input[type="tel"]:required:valid,
+    select:required:valid {
+        border: 1px solid #4caf50;
+    }
+
+    button[type="submit"] {
+        background-color: rgba(43, 58, 85, 0.74);
+        color: #fff;
+        border: none;
+        width: 100%;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type=number]{
+        -moz-appearance: textfield;
+    }
     
-    max-width: 600px;
-    min-height: 750px;
-    height: 750px;
-    min-width: 300px;
-}
-
-/* WHY US STYLING */
-
-.secondary-components ul {
-    list-style: none;
-    width: 100%;
-    height: 600px;
+    /* Style the submit button on hover */
+    button[type="submit"]:hover {
+        background-color: #888888;
+    }
     
-}
+    button {
+        padding:0;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .loading-gif-container {
+        width: 100%;
+        height: 100%;
+        background-color: #888888;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    }
+    .loading-gif {
+        height: 20px;
+        width: auto;
+    }
 
-.why-us-title {
-    text-align: center;
-    font-weight: 400;
-    padding-top: 30px;
-    padding-bottom: 20px;
-}
+    .success-button {
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        background-color: #4caf50;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-us .estimate-inquiry {
+        margin-top: 20px;
+        max-width: 600px;
+        min-height: 750px;
+        height: 750px;
+        min-width: 300px;
+    }
 
-.why-us-list {
-    min-width:300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.why-us-list-content {
-    height: 125px;
-    cursor: default;
-}
-.baseline-content {
-    width: auto;
-    display: flex;
-    align-items: center;
-    font-size: 17.5px;
-    
-    text-decoration: underline;
-}
-.baseline-content:hover {
-    text-decoration: none;
-}
-.reason-excerpt{
-    margin-left: 50px;
-    font-weight: 300;
-}
-.icon-container {
-    width: 50px;
-}
-.icon-container img{
-    height: 35px;
-    margin-right: 10px;
-    float: right;
-}
-
-
-/* ESTIMATE INQUIRY FORM */
-
-.estimate-inquiry {
-    margin-bottom: 20px;
-    min-height: 750px;
-    height: 750px;
-    background-color: rgb(255, 255, 255, 85%);
-    border-radius: 25px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    
-}
-.estimate-inquiry h2 {
-    padding-top: 40px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
-}
-.estimate-inquiry h4 {
-    padding-bottom: 20px;
-}
-.estimate-inquiry h2, .estimate-inquiry h4, .general-content h2, .general-content h4, .general-content ul li{
-    color: rgb(43, 58, 85);
-    padding-left: 30px;
-    padding-right: 30px;
-    text-align: center;
-    font-weight: 400;
-}
-.estimate-inquiry-form {
-    background-color: #f7f7f7;
-    padding: 20px;
-    border-radius: 10px;
-    min-width: 225px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-
-}
-
-.form-elements {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-element {
-    margin-bottom: 20px;
-}
-
-label {
-    padding-bottom: 2.5px;
-    font-weight: bold;
-    display: block;
-    color: rgb(43, 58, 85);
-    font-weight: 400;
-}
-
-input, select, textarea {
-    width: 100%;
-    height: auto;
-    padding: 10px;
-    color: rgba(43, 58, 85, 0.771);
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-textarea {
-    resize: none;
-}
-
-input[type="text"],
-input[type="tel"],
-select {
-    font-size: 16px;
-}
-
-input[type="text"]:focus,
-input[type="tel"]:focus,
-select:focus {
-    border: 1px solid rgba(43, 58, 85, 0.808);
-    outline: none;
-}
-
-
-input[type="text"]:required:valid,
-input[type="tel"]:required:valid,
-select:required:valid {
-    border: 1px solid #4caf50;
-}
-
-button[type="submit"] {
-    background-color: rgba(43, 58, 85, 0.74);
-    color: #fff;
-    border: none;
-    width: 100%;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-input[type=number]{
-    -moz-appearance: textfield;
-}
-  
-  /* Style the submit button on hover */
-button[type="submit"]:hover {
-    background-color: #888888;
-}
-  
-button {
-    padding:0;
-    height: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.loading-gif-container {
-    width: 100%;
-    height: 100%;
-    background-color: #888888;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-}
-.loading-gif {
-    height: 20px;
-    width: auto;
-}
-
-.success-button {
-    border-radius: 5px;
-    width: 100%;
-    height: 100%;
-    background-color: #4caf50;
-    justify-content: center;
-    align-items: center;
-}
-.contact-us .estimate-inquiry {
-    margin-top: 20px;
-    max-width: 600px;
-    min-height: 750px;
-    height: 750px;
-    min-width: 300px;
-}
-
-.contact-us .estimate-inquiry-form {
-    text-align: left;
-    width: 420px;
-    min-width: 300px;
-    padding: 30px;
-}
 }
 @media screen and (max-height: 800px) and (max-width:1500px) {
     h2.title{
@@ -436,6 +430,7 @@ button {
     
     .home-page.secondary-components {
         min-width:300px;
+        width: 650px;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -450,7 +445,7 @@ button {
         margin-bottom: 20px;
         background-color: rgb(255, 255, 255, 85%);
         border-radius: 25px;
-        width: 650px;
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -641,17 +636,13 @@ button {
     /* CONTACT US STYLING */
     .contact-us .estimate-inquiry {
         margin-top: 20px;
-        width: 600px;
-        height: 525px;
-        min-width: 300px;
+   
     }
-    .contact-us
-    .contact-us .estimate-inquiry-form {
+    /* .contact-us .estimate-inquiry-form {
         text-align: left;
-        width: 420px;
         min-width: 300px;
         padding: 30px; 
-    }
+    } */
 }
 
 
