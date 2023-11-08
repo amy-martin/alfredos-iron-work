@@ -17,7 +17,7 @@ export const NavSidebar = () => {
         }
         window.addEventListener('resize', handleWidthResize)
 
-        if (screenWidth >  860) {
+        if (screenWidth >  920) {
             dispatch(turnOffDisplay())
         }
     })
@@ -25,6 +25,7 @@ export const NavSidebar = () => {
     const display = useSelector(selectNavSidebarDisplay)
     return (
         <div className="nav-sidebar sidebar-overlay" style={{display:`${display}`}}>
+            {console.log(`Entered sidebar display: display value -- ${display}`)}
             <div className="sidebar-container" style={{display:`${display}`}} onMouseLeave={handleSidebarExit}>
                 <NavOptions />
             </div>

@@ -5,12 +5,11 @@ import { createSlice } from "@reduxjs/toolkit";
 const navSidebarSlice = createSlice({
     name: 'navSidebar',
     initialState: {
-        display: null
+        display: 'none'
     },
     reducers: {
         toggleSidebarDisplay: state => {
             if (!state.display || state.display === 'none') {
-            
                 state.display = 'flex'
             } else if (state.display === 'flex') {
                 state.display = 'none'

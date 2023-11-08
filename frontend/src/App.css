@@ -113,19 +113,12 @@ nav ul li a:hover {
 }
 
 
-@media not screen and (max-width: 860px){
+@media not screen and (max-width: 920px){
     .narrow-screen.navbar  {
         display: none;
     }
-    .nav-sidebar, .sidebar-overlay {
-        display: none;
-    }
-    /* .nav-sidebar >* {
-        display: none;
-    } */
-    
 }
-@media screen and (max-width:860px){
+@media screen and (max-width: 920px){
     .wide-screen.navbar {
         display: none;
     }
@@ -178,6 +171,9 @@ nav ul li a:hover {
       }
       
 }
+
+
+
 @media not screen and (max-height: 800px) and (max-width: 1500px) {
 
 /* SECONDARY COMPONENTS STYLING */
@@ -432,8 +428,8 @@ button {
     }
     
     .home-page.secondary-components >* {
-        
-        max-width: 600px;
+/*         
+        max-width: 600px; */
         height: 550px;
         min-width: 300px;
     }
@@ -645,7 +641,7 @@ button {
     /* CONTACT US STYLING */
     .contact-us .estimate-inquiry {
         margin-top: 20px;
-        max-width: 600px;
+        width: 600px;
         height: 525px;
         min-width: 300px;
     }
