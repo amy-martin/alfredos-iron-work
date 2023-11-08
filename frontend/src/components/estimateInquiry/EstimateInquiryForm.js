@@ -62,10 +62,10 @@ export const EstimateInquiryForm = () => {
                             <option disabled selected value="">Select an option</option>
                             <option value="Balcony">Balcony</option>
                             <option value="Railing">Railing</option>
+                            <option value="Door">Door</option>
                             <option value="Gate/Fence">Gate/Fence</option>
                             <option value="Grille/Security Bars">Grille/Security Bars</option>
                             <option value="Furniture/Decorative">Furniture/Decorative</option>
-                            <option value="Signage">Signage</option>
                             <option value="Landscape">Landscape</option>
                             <option value="Repair">Repair</option>
                             <option value="Custom/Other">Custom/Other</option>

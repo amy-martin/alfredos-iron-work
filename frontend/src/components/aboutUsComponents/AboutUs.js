@@ -2,7 +2,7 @@ import React from "react";
 
 export const AboutUs = () => {
     return (
-        <div className="about-us">
+        <div className="about-us-container">
             <h2 className="title">ABOUT ALFREDO'S IRONWORK</h2>
             <p className="about-us-excerpt">
 
@@ -36,25 +36,3 @@ export const AboutUs = () => {
 
     )
 }
-
-
-// <p>
-//     <strong>About Alfredo's Ironwork</strong><br><br>
-
-//     Alfredo's Ironwork is a testament to the American dream, a story of dedication, craftsmanship, and the pursuit of excellence. 
-// Founded in 2004 by Alfredo Martin, a Mexican immigrant, this business has evolved into a symbol of hard work, family values, and the enduring love of craftsmanship.<br><br>
-
-//     The heart of our story revolves around Alfredo and his eldest son, Francisco Alfredo Martin, who embarked on a journey to create art from raw iron. 
-// With a small but highly skilled team, they've transformed their dreams into reality. What began as a modest endeavor has grown into a thriving family-built and family-run enterprise,
-//  dedicated to the art of ironwork.<br><br>
-
-//     Our work is more than just iron; it's a reflection of our unwavering commitment to quality, client satisfaction, and personalized service.
-// Every project we undertake is a unique canvas for us to express our craft, artistry, and expertise. With each creation, we seek to blend innovation and tradition, 
-// to bring life to every piece of iron.<br><br>
-
-//     In the face of challenges and triumphs, our team has continued to innovate and elevate the craft, offering a wide range of ironwork from custom balconies 
-// to elegant stair rails, sturdy gates, and artistic fences. These are not just products; they are the embodiment of our dedication and the family tradition that has always guided us.<br><br>
-
-//     While the world may change rapidly, we believe in the enduring beauty and value of ironwork. It's not just about building structures; it's about crafting stories, 
-// preserving memories, and leaving legacies that withstand the test of time. At Alfredo's Ironwork, we invite you to be a part of our journey, celebrate our passion for the craft, and let us bring your ironwork dreams to life.
-// </p>
