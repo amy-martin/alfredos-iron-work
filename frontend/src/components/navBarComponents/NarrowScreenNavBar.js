@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import {toggleSidebarDisplay} from '../../slices/navSidebarSlice'
+import { NavLink } from "react-router-dom";
 
 export const NarrowScreenNavBar = () => {
     const dispatch = useDispatch()
@@ -9,7 +10,7 @@ export const NarrowScreenNavBar = () => {
     }
     return (
         <nav className="narrow-screen navbar" >
-            <img src={require('../../media/aiw-logo.png')}/>
+            <NavLink className="site-logo" to={"/"}><img src={require('../../media/aiw-logo.png')}/></NavLink>
             <img className="sidebar-icon" src={require('../../media/sidebar-icon.png')} onClick={handleClick}/>
         </nav>
     )
