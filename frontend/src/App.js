@@ -7,6 +7,7 @@ import { HomePage } from './components/homePageComponents/HomePage';
 import ContactUs from './components/contactUsComponents/ContactUs';
 import { AboutUs } from './components/aboutUsComponents/AboutUs';
 import { Services } from './components/servicesComponents/Services';
+import { NavSidebar } from './components/navBarComponents/NavSidebar';
 
 
 
@@ -20,7 +21,7 @@ const App = () => {
       <NavBar />
       <main className='main-section'>
 
-        {/* <NavBarSideBar /> */}
+        <NavSidebar />
         <Routes>
           <Route path='/' element={<HomePage />}/>
           <Route path='/services' element={<Services />}/>

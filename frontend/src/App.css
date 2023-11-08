@@ -36,7 +36,7 @@ body {
  
 main {
     position: absolute;
-    top: 150px;
+    top: 110px;
     width: 100%;
     min-width:300px;
     height: calc(100% - 150px);
@@ -81,7 +81,6 @@ nav.narrow-screen {
 }
 
 
-
 .brand-name {
     display: flex;
     align-items: center;
@@ -112,15 +111,72 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
-@media screen and (min-width: 861px){
+
+
+@media not screen and (max-width: 860px){
     .narrow-screen.navbar  {
         display: none;
     }
+    .nav-sidebar, .sidebar-overlay {
+        display: none;
+    }
+    /* .nav-sidebar >* {
+        display: none;
+    } */
+    
 }
 @media screen and (max-width:860px){
     .wide-screen.navbar {
         display: none;
     }
+    .sidebar-overlay {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(43, 58, 85, .7);
+        z-index: 1000;
+        display: flex;
+        justify-content: end;
+      }
+
+      
+      .sidebar-container {
+        width: 80%;
+        max-width: 300px;
+        background-color: #fff;
+        height: 100%;
+        overflow-y: auto; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 100000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .sidebar-container ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .sidebar-container li {
+        padding: 10px 0;
+        text-align: center;
+      }
+      
+      .sidebar-container li a {
+        text-decoration: none;
+        color: rgb(43, 58, 85);
+        font-size: 18px;
+        display: block;
+        padding: 10px;
+        transition: color 0.3s;
+      }
+      
+      .sidebar-container li a:hover {
+        color: rgb(255, 255, 255);
+        background-color: rgb(43, 58, 85);
+      }
+      
 }
 @media not screen and (max-height: 800px) and (max-width: 1500px) {
 
