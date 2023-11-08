@@ -8,6 +8,7 @@ import ContactUs from './components/contactUsComponents/ContactUs';
 import { AboutUs } from './components/aboutUsComponents/AboutUs';
 import { Services } from './components/servicesComponents/Services';
 import { NavSidebar } from './components/navBarComponents/NavSidebar';
+import { Gallery } from './components/navBarComponents/galleryComponents/Gallery';
 
 
 
@@ -25,6 +26,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<HomePage />}/>
           <Route path='/services' element={<Services />}/>
+          <Route path='/gallery' element={<Gallery />}/>
           <Route path='/about-us' element={<AboutUs />}/>
           <Route path='/contact-us' element={<ContactUs />}/>
         </Routes>

@@ -738,3 +738,7 @@ nav ul li a:hover {
 .about-us-excerpt a{
     color: rgb(43, 58, 85);
 }
+
+strong {
+    color:rgb(43, 58, 85)
+}
