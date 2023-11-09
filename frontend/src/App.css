@@ -167,8 +167,9 @@ nav ul li a:hover {
 }
 
 
+  
 
-@media not screen and (max-height: 800px) and (max-width: 1500px) {
+@media not screen and (max-height: 1000px) and (max-width: 1500px) {
 
     /* SECONDARY COMPONENTS STYLING */
     .home-page.secondary-components {
@@ -395,7 +396,7 @@ nav ul li a:hover {
     }
 
 }
-@media screen and (max-height: 800px) and (max-width:1500px) {
+@media screen and (max-height: 1000px) and (max-width:1500px) {
     h2.title{
         min-width: 300px;
         width: 100%;
@@ -409,6 +410,7 @@ nav ul li a:hover {
         min-width:300px;
         display: flex;
         flex-direction: row;
+
         width: 100%;
         flex-wrap: wrap ;
         justify-content: center;
@@ -416,22 +418,12 @@ nav ul li a:hover {
     }
     
     .home-page.secondary-components >* {
-/*         
-        max-width: 600px; */
-        height: 600px;
+        
+        max-width: 600px;
+        height: 550px;
         min-width: 300px;
     }
     
-    .home-page.secondary-components {
-        min-width:300px;
-        width: 650px;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap ;
-        justify-content: center;
-        align-items: center;
-    }
 
     /* ESTIMATE INQUIRY FORM */
 
@@ -615,8 +607,8 @@ nav ul li a:hover {
     }
     .reason-excerpt{
         margin-left: 30px;
-        font-weight: 300;
-        font-size: 14px;
+        font-weight: 400;
+        font-size: 12px;
     }
     .icon-container {
         width: 30px;
@@ -637,6 +629,239 @@ nav ul li a:hover {
         min-width: 300px;
         padding: 30px; 
     } */
+}
+@media screen and (max-width:600px) {
+    h2.title{
+        min-width: 300px;
+        width: 100%;
+        text-align: center;
+        font-weight: 600;
+        font-size: 17.5px;
+        padding: 40px;
+        height:auto;
+    }
+    .home-page.secondary-components {
+        min-width:300px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex-wrap: wrap ;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .home-page.secondary-components >* {
+        width: 90%;
+        height: 100%;
+    }
+    
+
+    /* ESTIMATE INQUIRY FORM */
+
+    .estimate-inquiry {
+        margin-bottom: 20px;
+        padding:10px;
+        padding-bottom: 15px;
+        background-color: rgb(255, 255, 255, 85%);
+        border-radius: 25px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+    }
+    h2.estimate-description-title {
+        font-size: 17.5px;
+        padding-top: 5;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+    .estimate-inquiry h4 {
+        font-size: 14px;
+        padding-bottom: 10px;
+    }
+    .estimate-inquiry h2, .estimate-inquiry h4, .general-content h2, .general-content h4, .general-content ul li{
+        color: rgb(43, 58, 85);
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: center;
+        font-weight: 400;
+    }
+    .estimate-inquiry-form {
+        background-color: #f7f7f7;
+        padding: 20px;
+        border-radius: 10px;
+        width:90%;
+        min-width: 250px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .form-elements {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-element {
+        margin-bottom: 5px;
+    }
+
+    label {
+        font-size: 14px;
+        padding-bottom: 1.5px;
+        font-weight: bold;
+        display: block;
+        color: rgb(43, 58, 85);
+        font-weight: 400;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        height: auto;
+        padding: 5px;
+        color: rgba(43, 58, 85, 0.771);
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    select {
+        font-size: 14px;
+    }
+
+    input[type="text"]:focus,
+    input[type="tel"]:focus,
+    select:focus {
+        border: 1px solid rgba(43, 58, 85, 0.808);
+        outline: none;
+    }
+
+
+    input[type="text"]:required:valid,
+    input[type="tel"]:required:valid,
+    select:required:valid {
+        border: 1px solid #4caf50;
+    }
+
+    button[type="submit"] {
+        background-color: rgba(43, 58, 85, 0.74);
+        color: #fff;
+        border: none;
+        width: 100%;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type=number]{
+        -moz-appearance: textfield;
+    }
+    
+    /* Style the submit button on hover */
+    button[type="submit"]:hover {
+        background-color: #888888;
+    }
+    
+    button {
+        padding:0;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .loading-gif-container {
+        width: 100%;
+        height: 100%;
+        background-color: #888888;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    }
+    .loading-gif {
+        height: 20px;
+        width: auto;
+    }
+
+    .success-button {
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        background-color: #4caf50;
+        justify-content: center;
+        align-items: center;
+    }
+    /* WHY US STYLING */
+
+    .secondary-components ul {
+        list-style: none;
+        width: 100%;
+        
+    }
+
+    .why-us-title {
+        text-align: center;
+        font-weight: 400;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+
+    .why-us-list {
+        margin-bottom:20px;
+        min-width:300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .why-us-list-content {
+        height: 125px;
+        cursor: default;
+    }
+    .baseline-content {
+        width: auto;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        
+        text-decoration: underline;
+    }
+    .baseline-content:hover {
+        text-decoration: none;
+    }
+    .reason-excerpt{
+        margin-left: 30px;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .icon-container {
+        width: 30px;
+    }
+    .icon-container img{
+        height: 30px;
+        margin-right: 10px;
+        float: right;
+    }
+
+    /* CONTACT US STYLING */
+    .contact-us .estimate-inquiry {
+        margin-top: 20px;
+   
+    }
 }
 
 
