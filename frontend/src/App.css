@@ -122,20 +122,12 @@ nav ul li a:hover {
     .wide-screen.navbar {
         display: none;
     }
-    .sidebar-overlay {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(43, 58, 85, .7);
-        z-index: 1000;
-        display: flex;
-        justify-content: end;
-      }
-
-      
       .sidebar-container {
-        width: 80%;
-        max-width: 300px;
+        position: fixed;
+        right: 0; 
+        float: right;
+        width: 250px;
+        max-width: 250px;
         background-color: #fff;
         height: 100%;
         overflow-y: auto; 
@@ -144,6 +136,7 @@ nav ul li a:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
+        transition: right 0.3s;
       }
       .sidebar-container ul {
         list-style-type: none;
@@ -169,6 +162,7 @@ nav ul li a:hover {
         color: rgb(255, 255, 255);
         background-color: rgb(43, 58, 85);
       }
+      
       
 }
 
@@ -755,7 +749,9 @@ strong {
   
   .services-list {
     padding: 20px;
-    max-width: 1100px;
+    width: 90%;
+    max-width: 1600px;
+    min-width: 300px;
     background-color: rgb(255, 255, 255, 85%);
     display: flex;
     flex-wrap: wrap;
@@ -765,27 +761,56 @@ strong {
   }
   
   .service {
-    width: 275px;
+    width: 300px;
     margin: 10px;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
     text-align: center;
+    align-content: center;
   }
-  .service.img-container {
-    width: 250px;
+
+  .img-container {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
     display: flex;
-    overflow-y: scroll;
+    /* padding: 10px 0; Add padding for visual separation from other content */
   }
-  .service img {
-    max-width: 100%;
-    height: auto;
+  
+  .service-image {
+    height: 250px; /* Set a fixed height */
+    width: 260px; /* Set a fixed width */
+    object-fit: cover; /* Crop the image to cover the specified dimensions */
+    margin-right: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+  
+  .service-image:hover {
+    transform: scale(1.1); /* Scale up the image on hover for a subtle zoom effect */
+  }
+  
+  /* Add scrollbar styling */
+  .img-container::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .img-container::-webkit-scrollbar-thumb {
+    background-color: #888888;
+    border-radius: 4px;
+  }
+  
+  .img-container::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
   }
   
   .service h3 {
     color: rgb(43, 58, 85);
-    font-weight: ;
+    /* font-weight: ; */
     font-size: 1.5rem;
     margin: 10px 0;
   }
@@ -795,4 +820,19 @@ strong {
     font-size: 1rem;
     color: #555;
   }
+
+  [id='/static/media/repair.f57bdac9c67a22e19870.jpg'] {
+    margin: 0 auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
   
+  .disclaimer {
+    width:75%;
+    min-width: 250px;
+    margin:40px;
+
+  }
+  .disclaimer strong {
+    color: white
+  }

@@ -50,7 +50,7 @@ export const EstimateInquiryForm = () => {
                     </div>
                     <div className="form-element">
                         <label htmlFor='phone'>Phone:</label>
-                        <input type="number" inputmode="numeric" pattern="[0-9]*" name='phone' id='phone' required onChange={handleChange} />
+                        <input type="number" inputMode="numeric" pattern="[0-9]*" name='phone' id='phone' required onChange={handleChange} />
                     </div>
                     <div className="form-element">
                         <label htmlFor='email'>Email:</label>

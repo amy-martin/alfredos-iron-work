@@ -6,7 +6,6 @@ import { NavLink } from "react-router-dom";
 export const NarrowScreenNavBar = () => {
     const dispatch = useDispatch()
     const handleClick = () => {
-        console.log('Entered handle click');
         dispatch(toggleSidebarDisplay());
     }
     return (

@@ -3,7 +3,6 @@ import { serverAddress } from "../App";
 
 export const sendEmail = createAsyncThunk('button/sendEmail', async(formData, thunkAPI) => {
 
-    console.log(formData)
     try {
         const options = {
             method: 'POST',
