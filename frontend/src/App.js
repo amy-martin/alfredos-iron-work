@@ -8,7 +8,7 @@ import ContactUs from './components/contactUsComponents/ContactUs';
 import { AboutUs } from './components/aboutUsComponents/AboutUs';
 import { Services } from './components/servicesComponents/Services';
 import { NavSidebar } from './components/navBarComponents/NavSidebar';
-import { Gallery } from './components/navBarComponents/galleryComponents/Gallery';
+import { Gallery } from './components/galleryComponents/Gallery';
 
 
 
