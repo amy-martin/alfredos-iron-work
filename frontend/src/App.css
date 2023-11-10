@@ -237,6 +237,7 @@ nav ul li a:hover {
     }
     .icon-container img{
         height: 35px;
+        width: auto;
         margin-right: 10px;
         float: right;
     }
