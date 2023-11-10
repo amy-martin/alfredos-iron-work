@@ -1,41 +1,43 @@
 import React from "react";
 import { Link } from "react-router-dom";
 export const Services = () => {
+
+    
     const services = [
         {
             title: 'Balconies',
             description: 'Beautiful custom-made balconies for your home.',
-            images: [{imageSrc: require('../../media/balcony-1.jpg')}, {imageSrc: require('../../media/balcony-2.jpg')}],
+            images: [{imageSrc: require('../../media/balcony-examples/balcony-1.jpg')}, {imageSrc: require('../../media/balcony-examples/balcony-2.jpg')}, {imageSrc: require('../../media/balcony-examples/balcony-3.jpg')},{imageSrc: require('../../media/balcony-examples/balcony-4.jpg')},{imageSrc: require('../../media/balcony-examples/balcony-5.jpg')},{imageSrc: require('../../media/balcony-examples/balcony-6.jpg')},],
         },
         {
             title: 'Railings',
             description: 'Elegant railings designed to enhance your property.',
-            images: [{imageSrc: require( '../../media/railing-1.jpg')}, {imageSrc: require( '../../media/railing-2.jpg')}, {imageSrc: require( '../../media/railing-4.jpg')}],
+            images: [ {imageSrc: require( '../../media/railing-examples/railing-1.jpg')},{imageSrc: require( '../../media/railing-examples/railing-2.jpg')},{imageSrc: require( '../../media/railing-examples/railing-3.jpg')},{imageSrc: require( '../../media/railing-examples/railing-4.jpg')},{imageSrc: require( '../../media/railing-examples/railing-5.jpg')},{imageSrc: require( '../../media/railing-examples/railing-6.jpg')},],
         },
         {
             title: 'Doors',
             description: 'Stunning iron doors to make a grand entrance.',
-            images: [{imageSrc:require( '../../media/door-3.jpg')},{imageSrc:require( '../../media/door-1.jpg')}],
+            images: [{imageSrc:require( '../../media/door-examples/door-1.jpg')},{imageSrc:require( '../../media/door-examples/door-2.jpg')}, {imageSrc:require( '../../media/door-examples/door-3.jpg')}, {imageSrc:require( '../../media/door-examples/door-4.jpg')}, {imageSrc:require( '../../media/door-examples/door-5.jpg')}],
           },
         {
             title: 'Gates/Fences',
             description: 'Sturdy gates and fences to secure your property.',
-            images: [{imageSrc:require( '../../media/gate-1.jpg')}, {imageSrc:require( '../../media/gate-2.jpg')}],
+            images: [{imageSrc:require( '../../media/gate-examples/gate-1.jpg')}, {imageSrc:require( '../../media/gate-examples/gate-2.jpg')}, {imageSrc:require( '../../media/gate-examples/gate-3.jpg')}, {imageSrc:require( '../../media/gate-examples/gate-4.jpg')}, {imageSrc:require( '../../media/gate-examples/gate-5.jpg')}, {imageSrc:require( '../../media/gate-examples/gate-6.jpg')}, {imageSrc:require( '../../media/gate-examples/gate-7.jpg')}],
         },
         {
             title: 'Grilles/Security Bars',
             description: 'Durable grilles and security bars for safety.',
-            images: [{imageSrc:require( '../../media/grille-1.jpg')}, {imageSrc:require( '../../media/grille-2.jpg')}, {imageSrc:require( '../../media/grille-3.jpg')}],
+            images: [{imageSrc:require( '../../media/grilles-examples/grille-1.jpg')}, {imageSrc:require( '../../media/grilles-examples/grille-2.jpg')}, {imageSrc:require( '../../media/grilles-examples/grille-3.jpg')}, {imageSrc:require( '../../media/grilles-examples/grille-4.jpg')}, {imageSrc:require( '../../media/grilles-examples/grille-5.jpg')}],
         },
         {
             title: 'Furniture/Decorative Ironwork',
             description: 'Custom iron furniture and decorative pieces.',
-            images: [{imageSrc:require( '../../media/decorative.jpg')}, {imageSrc:require( '../../media/decorative-1.jpg')}, {imageSrc:require( '../../media/decorative-2.jpg')}, {imageSrc:require( '../../media/decorative-3.jpg')}, {imageSrc:require( '../../media/decorative-4.jpg')}],
+            images: [{imageSrc:require( '../../media/decorative-examples/decorative-1.jpg')}, {imageSrc:require( '../../media/decorative-examples/decorative-2.jpg')}, {imageSrc:require( '../../media/decorative-examples/decorative-3.jpg')}, {imageSrc:require( '../../media/decorative-examples/decorative-4.jpg')}, {imageSrc:require( '../../media/decorative-examples/decorative-5.jpg')}, {imageSrc:require( '../../media/decorative-examples/decorative-6.jpg')}],
         },
         {
             title: 'Landscape Ironwork',
             description: 'Artistic ironwork to enhance your landscape.',
-            images: [{imageSrc:require( '../../media/landscape-1.jpg')}, {imageSrc:require( '../../media/landscape-2.jpg')}],
+            images: [{imageSrc:require( '../../media/landscape-examples/landscape-1.jpg')}, {imageSrc:require( '../../media/landscape-examples/landscape-2.jpg')},{imageSrc:require( '../../media/landscape-examples/landscape-3.jpg')},{imageSrc:require( '../../media/landscape-examples/landscape-4.jpg')}],
         },
         {
             title: 'Repairs/Enhancements',
@@ -45,7 +47,7 @@ export const Services = () => {
         {
             title: 'Custom/Other',
             description: 'Tailored ironwork solutions for your specific needs.',
-            images: [{imageSrc:require( '../../media/custom-1.jpg')}, {imageSrc:require( '../../media/custom-2.jpg')}],
+            images: [{imageSrc:require( '../../media/custom-examples/custom-1.jpg')}, {imageSrc:require( '../../media/custom-examples/custom-2.jpg')}, {imageSrc:require( '../../media/custom-examples/custom-3.jpg')}, {imageSrc:require( '../../media/custom-examples/custom-4.jpg')}, {imageSrc:require( '../../media/custom-examples/custom-5.jpg')}],
         },
       ];
 
