@@ -164,10 +164,6 @@ nav ul li a:hover {
       
       
 }
-
-
-  
-
 @media not screen and (max-height: 1000px) and (max-width: 1500px) {
 
     /* SECONDARY COMPONENTS STYLING */
@@ -942,9 +938,11 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    margin:20px;
 }
 
 .about-us-excerpt {
+    
     color: rgb(43, 58, 85);
     text-align: center;
     padding: 30px;
