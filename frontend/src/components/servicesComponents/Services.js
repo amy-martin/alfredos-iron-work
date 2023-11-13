@@ -41,13 +41,13 @@ export const Services = () => {
         },
         {
             title: 'Repairs/Enhancements',
-            description: 'Quality repair services for iron structures.',
+            description: 'Quality repair and enhancement services for iron structures.',
             images: [{imageSrc:require( '../../media/repair.jpg')}],
         },
         {
             title: 'Custom/Other',
             description: 'Tailored ironwork solutions for your specific needs.',
-            images: [{imageSrc:require( '../../media/custom-examples/custom-1.jpg')}, {imageSrc:require( '../../media/custom-examples/custom-2.jpg')}, {imageSrc:require( '../../media/custom-examples/custom-3.jpg')}, {imageSrc:require( '../../media/custom-examples/custom-4.jpg')}, {imageSrc:require( '../../media/custom-examples/custom-5.jpg')}],
+            images: [{imageSrc:require( '../../media/custom-examples/custom-1.jpg')}, {imageSrc:require( '../../media/custom-examples/custom-2.jpg')}, {imageSrc:require( '../../media/custom-examples/custom-3.jpg')}, {imageSrc:require( '../../media/custom-examples/custom-4.jpg')}],
         },
       ];
 

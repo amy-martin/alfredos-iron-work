@@ -4,15 +4,14 @@ import { NavOptions } from "./NavOptions";
 
 
 export const WideScreenNavBar = () => {
+    const centerItem = (
+        <NavLink className="site-logo" to={"/"}>
+            <img src={require('../../media/aiw-logo.png')}/>
+        </NavLink>
+    )
     return (
         <nav className="wide-screen navbar">
-            <NavLink className="site-logo" to={"/"}>
-                <div className="brand-name">
-                <img src={require('../../media/welding-man.png')}/>
-                <h1>Alfredo's</h1><h3>IRONWORK</h3>
-                </div>
-            </NavLink>
-            <NavOptions />
+            <NavOptions centerItem={centerItem}/>
         </nav>
     )
 }
