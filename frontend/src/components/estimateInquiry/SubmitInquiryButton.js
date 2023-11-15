@@ -27,7 +27,7 @@ export const SubmitInquiryButton = () => {
 
             <div className="loading-gif-container" style={{display: `${imgDisplay}`}}><img className = 'loading-gif' src={require('../../media/loading.gif')}/></div>
             <p className = 'success-button' style={{display: `${successTextDisplay}`}}>Inquiry Sent!</p>
-            <p className = 'failure-button' style={{display: `${failureTextDisplay}`}}>{error}</p>
+            <p className = 'failure-button' style={{display: `${failureTextDisplay}`}}>Failed to send. Please try again.</p>
         </button>
     )
 }    
