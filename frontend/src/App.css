@@ -58,7 +58,10 @@ nav {
     align-items: center;
 }
 
-
+img.site-logo {
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
 /* NARROW SCREEN STYLING */
 
@@ -86,7 +89,6 @@ nav ul {
 }
 nav ul li a {
     text-decoration: none;
-    padding-right: 15px;
     color: rgb(43, 58, 85)
 }
 
@@ -351,6 +353,8 @@ strong {
         display: none;
     }
     ul.nav-options {
+        padding:0;
+        margin:0;
         justify-content: center;
         align-items: center;
     }
@@ -361,8 +365,6 @@ strong {
     nav img {
         height: 100px;
         width: auto;
-        padding-left: 20px;
-        padding-right: 20px
     }
    
     .nav-options li a {
