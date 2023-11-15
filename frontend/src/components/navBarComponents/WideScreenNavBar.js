@@ -6,7 +6,7 @@ import { NavOptions } from "./NavOptions";
 export const WideScreenNavBar = () => {
     const centerItem = (
         <NavLink to={"/"}>
-            <img className = "site-logo" src={require('../../media/aiw-logo.png')}/>
+            <img className = "site-logo" src={require('../../media/aiw-logo-small.png')}/>
         </NavLink>
     )
     return (
