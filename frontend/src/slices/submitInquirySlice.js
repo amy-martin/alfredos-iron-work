@@ -28,7 +28,7 @@ const submitInquirySlice = createSlice({
     name: 'button',
     initialState: {
         status: 'idle',
-        imgDisplay: 'none',
+        loadingImgDisplay: 'none',
         textDisplay: 'flex',
         successTextDisplay: 'none',
         failureTextDisplay: 'none',
@@ -48,19 +48,20 @@ const submitInquirySlice = createSlice({
         builder
             .addCase(sendEmail.pending, (state, action) => {
                 state.status = 'loading';
-                state.imgDisplay = 'flex';
+                state.loadingImgDisplay = 'flex';
                 state.textDisplay = 'none';
             })
             .addCase(sendEmail.fulfilled, (state, action) => {
                 state.status = 'fulfilled';
-                state.imgDisplay = 'none';
+                state.loadingImgDisplay = 'none';
                 state.successTextDisplay = 'flex';
             })
             .addCase(sendEmail.rejected, (state, action) => {
                 state.loading = 'failed';
                 state.error = action.error.message;
                 state.failureTextDisplay = 'flex';
-                state.textDisplay = 'none'
+                state.textDisplay = 'none';
+                state.loadingImgDisplay = 'none';
             })
     }
 });
