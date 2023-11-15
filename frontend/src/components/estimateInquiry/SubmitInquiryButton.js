@@ -4,7 +4,7 @@ import { resetButton, selectButtonDisplay } from "../../slices/submitInquirySlic
 
 export const SubmitInquiryButton = () => {
     const buttonData = useSelector(selectButtonDisplay);
-    const {imgDisplay, textDisplay, successTextDisplay, failureTextDisplay, error, status} = buttonData
+    const {loadingImgDisplay, textDisplay, successTextDisplay, failureTextDisplay, error, status} = buttonData
     const dispatch = useDispatch()
     useEffect(() => {
         let timer
@@ -25,7 +25,7 @@ export const SubmitInquiryButton = () => {
         <button type="submit">
             <p className ='normal-button' style={{display: `${textDisplay}`}}>Send Inquiry</p>
 
-            <div className="loading-gif-container" style={{display: `${imgDisplay}`}}><img className = 'loading-gif' src={require('../../media/loading.gif')}/></div>
+            <div className="loading-gif-container" style={{display: `${loadingImgDisplay}`}}><img className = 'loading-gif' src={require('../../media/loading.gif')}/></div>
             <p className = 'success-button' style={{display: `${successTextDisplay}`}}>Inquiry Sent!</p>
             <p className = 'failure-button' style={{display: `${failureTextDisplay}`}}>Failed to send. Please try again.</p>
         </button>
