@@ -8,7 +8,7 @@ export const SubmitInquiryButton = () => {
     const dispatch = useDispatch()
     useEffect(() => {
         let timer
-        if (status === 'fulfilled') {
+        if (status === 'fulfilled' || status === 'failed') {
             timer = setTimeout(() => {
                 dispatch(resetButton())
             }, 3000)

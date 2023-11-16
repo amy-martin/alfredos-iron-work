@@ -17,6 +17,7 @@ export const fetchGalleryPhotos = createAsyncThunk('gallery/retrieveGalleryPhoto
         }
 
         const data = await response.json();
+        
         const photoList = data.photoset.photo.map((photo) => ({
         id: photo.id,
         title: photo.title,

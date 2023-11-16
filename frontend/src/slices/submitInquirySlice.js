@@ -37,7 +37,7 @@ const submitInquirySlice = createSlice({
     reducers: {
         resetButton: state => {
             state.status = 'idle';
-            state.imgDisplay = 'none';
+            state.loadingImgDisplay = 'none';
             state.textDisplay = 'flex';
             state.successTextDisplay= 'none';
             state.failureTextDisplay = 'none';
