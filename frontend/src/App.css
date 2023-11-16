@@ -70,7 +70,7 @@ img.sidebar-icon {
     width: auto;
     position: absolute;
     right:0;
-    height: 35px;
+    height: 30px;
     margin: 30px;
 }
 
@@ -672,7 +672,7 @@ strong {
 }
 .contact-us ul {
     list-style: none;
-    margin: 20px;
+    
 }
 }
 @media screen and (max-width:600px) {
@@ -958,5 +958,6 @@ strong {
 .contact-us ul {
     list-style: none;
     margin: 20px;
+    padding: 0;
 }
 }
