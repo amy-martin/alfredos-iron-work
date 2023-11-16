@@ -22,7 +22,7 @@ export const Services = () => {
         {
             title: 'Gates/Fences',
             description: 'Sturdy gates and fences to secure your property.',
-            images: [{imageSrc:require( '../../media/gate-examples/gate-1.jpeg')}, {imageSrc:require( '../../media/gate-examples/gate-2.jpeg')}, {imageSrc:require( '../../media/gate-examples/gate-3.jpeg')}, {imageSrc:require( '../../media/gate-examples/gate-4.jpeg')}, {imageSrc:require( '../../media/gate-examples/gate-5.jpeg')}, {imageSrc:require( '../../media/gate-examples/gate-6.jpeg')}, {imageSrc:require( '../../media/gate-examples/gate-7.jpeg')}],
+            images: [{imageSrc:require( '../../media/gate-examples/gate-1.jpeg')},{imageSrc:require( '../../media/gate-examples/gate-2.jpeg')}, {imageSrc:require( '../../media/gate-examples/gate-3.jpeg')}, {imageSrc:require( '../../media/gate-examples/gate-4.jpeg')}, {imageSrc:require( '../../media/gate-examples/gate-5.jpeg')}, {imageSrc:require( '../../media/gate-examples/gate-6.jpeg')}, {imageSrc:require( '../../media/gate-examples/gate-7.jpeg')}],
         },
         {
             title: 'Grilles/Security Bars',
@@ -37,7 +37,7 @@ export const Services = () => {
         {
             title: 'Landscape Ironwork',
             description: 'Artistic ironwork to enhance your landscape.',
-            images: [{imageSrc:require( '../../media/landscape-examples/landscape-1.jpeg')}, {imageSrc:require( '../../media/landscape-examples/landscape-2.jpeg')},{imageSrc:require( '../../media/landscape-examples/landscape-3.jpeg')},{imageSrc:require( '../../media/landscape-examples/landscape-4.jpeg')}],
+            images: [{imageSrc:require( '../../media/landscape-examples/landscape-2.jpeg')},{imageSrc:require( '../../media/landscape-examples/landscape-3.jpeg')},{imageSrc:require( '../../media/landscape-examples/landscape-4.jpeg')}],
         },
         {
             title: 'Repairs/Enhancements',
