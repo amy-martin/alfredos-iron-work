@@ -301,6 +301,10 @@ strong {
     margin-right: 20px;
 }
 
+.contact-us ul {
+    list-style: none;
+    padding: 20px;
+}
 
 
 @media not screen and (max-width: 920px){
@@ -670,10 +674,7 @@ strong {
 .contact-us .general-content ul li a:hover {
     text-decoration: none;
 }
-.contact-us ul {
-    list-style: none;
-    
-}
+
 }
 @media screen and (max-width:600px) {
     h2.title{
@@ -954,10 +955,5 @@ strong {
 
 .contact-us .general-content ul li a:hover {
     text-decoration: none;
-}
-.contact-us ul {
-    list-style: none;
-    margin: 20px;
-    padding: 0;
 }
 }
