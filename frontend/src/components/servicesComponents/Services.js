@@ -32,7 +32,7 @@ export const Services = () => {
         {
             title: 'Furniture/Decorative',
             description: 'Custom iron furniture and decorative pieces.',
-            images: [{imageSrc:require( '../../media/decorative-examples/decorative-1.jpeg')}, {imageSrc:require( '../../media/decorative-examples/decorative-2.jpeg')}, {imageSrc:require( '../../media/decorative-examples/decorative-3.jpeg')}, {imageSrc:require( '../../media/decorative-examples/decorative-4.jpeg')}, {imageSrc:require( '../../media/decorative-examples/decorative-5.jpeg')}],
+            images: [{imageSrc:require( '../../media/decorative-examples/decorative-1.jpeg')}, {imageSrc:require( '../../media/decorative-examples/decorative-2.jpeg')}, {imageSrc:require( '../../media/decorative-examples/decorative-3.jpeg')}],
         },
         {
             title: 'Landscape Ironwork',
@@ -47,7 +47,7 @@ export const Services = () => {
         {
             title: 'Custom/Other',
             description: 'Tailored ironwork solutions for your specific needs.',
-            images: [{imageSrc:require( '../../media/custom-examples/custom-1.jpeg')}, {imageSrc:require( '../../media/custom-examples/custom-2.jpeg')}, {imageSrc:require( '../../media/custom-examples/custom-3.jpeg')}, {imageSrc:require( '../../media/custom-examples/custom-4.jpeg')}],
+            images: [{imageSrc:require( '../../media/custom-examples/custom-1.jpeg')}, {imageSrc:require( '../../media/custom-examples/custom-2.jpeg')}, {imageSrc:require( '../../media/custom-examples/custom-3.jpeg')}],
         },
       ];
 

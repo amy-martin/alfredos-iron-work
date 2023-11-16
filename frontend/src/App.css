@@ -230,8 +230,10 @@ strong {
     color: #555;
   }
 
-  [id='/static/media/repair.f57bdac9c67a22e19870.jpg'] {
-    margin: 0 auto;
+  [id='/static/media/repair.fab03f5c1acf5c09090c.jpeg'] {
+    display: block;
+    margin: 0 ;
+    margin-right:0;
     overflow-y: hidden;
     overflow-x: hidden;
   }
