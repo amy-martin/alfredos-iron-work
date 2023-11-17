@@ -10,7 +10,7 @@ export const NarrowScreenNavBar = () => {
     }
     return (
         <nav className="narrow-screen navbar" >
-            <NavLink className="site-logo" to={"/"}><img src={require('../../media/aiw-logo-small.png')}/></NavLink>
+            <NavLink  to={"/"}><img className="site-logo"src={require('../../media/aiw-logo-small.png')}/></NavLink>
             <img className="sidebar-icon" src={require('../../media/sidebar-icon.png')} onClick={handleClick}/>
         </nav>
     )

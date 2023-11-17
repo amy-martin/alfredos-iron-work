@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const AboutUs = () => {
     return (
@@ -29,7 +30,7 @@ export const AboutUs = () => {
                 ironwork dreams a reality. <br/><br/><br/><br/>
 
 
-                <strong>Call us at <a href="tel:818-300-4802">(818) 300-4802</a> or fill out our 'Estimate Inquiry' form found in the 'Contact Us' page to schedule your free estimate today.</strong>
+                <strong>Call us at <a href="tel:818-300-4802">(818) 300-4802</a> or fill out our Estimate Inquiry form found in the <Link to='/contact-us'>Contact Us</Link> page to schedule your free estimate today.</strong>
             </p>
 
         </div>
