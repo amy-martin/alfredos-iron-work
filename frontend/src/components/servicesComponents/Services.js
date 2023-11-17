@@ -70,7 +70,7 @@ export const Services = () => {
             </div>
             <p class="disclaimer">
                 <strong>DISCLAIMER: </strong>The images displayed on this page are for illustrative purposes only and have been sourced from various online 
-                platforms. They serve as examples to better illustrate the scope and capabilities of our work. For a comprehensive showcase of our actual projects and 
+                platforms. They serve as examples to better illustrate the scope and capabilities of our work. For a comprehensive showcase of our own projects and 
                 craftsmanship, we invite you to explore our <Link to='/gallery'>Gallery</Link> section. There, you will find a curated collection of our completed works, providing a 
                 more accurate representation of the quality and diversity of our services.We appreciate your understanding and welcome any inquiries you may 
                 have regarding our portfolio or services.
