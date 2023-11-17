@@ -16,7 +16,7 @@ function ContactUs() {
     <div className="contact-us">
       <h2 className="title">CONTACT US</h2>
       <div className="general-content">
-        <h2>General Inquiries:</h2>
+        <h2 className="general-inquiries-title">General Inquiries:</h2>
         <h4>If you have any questions, please feel free to reach out to us:</h4>
         <ul>
           <li>Email: <a href="mailto:info@alfredosironwork.com">info@alfredosironwork.com</a></li>

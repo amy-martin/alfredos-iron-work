@@ -3,7 +3,7 @@ import React from "react";
 export const AboutUs = () => {
     return (
         <div className="about-us-container">
-            <h2 className="title">ABOUT ALFREDO'S IRONWORK</h2>
+            <h2 className="title">ABOUT US</h2>
             <p className="about-us-excerpt">
 
                 At Alfredo's Ironwork, our story is one of dedication, craftsmanship, and the pursuit of the American dream. Founded in 2004 by Alfredo Martin in Los Angeles, CA, 
