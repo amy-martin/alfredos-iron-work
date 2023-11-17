@@ -16,7 +16,6 @@ export const sendEmail = createAsyncThunk('button/sendEmail', async(formData, th
                 formData
             })
         }
-        
         await fetch(`${serverAddress}/submit-inquiry`, options)
     } catch (e) {
         throw e
