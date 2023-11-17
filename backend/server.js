@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
 app.use(cors({
-    origin: ['http://localhost:3000', 'http://localhost:3001', 'https://alfredos-iron-work.onrender.com'],
+    origin: ['http://localhost:3000', 'http://localhost:3001', 'https://alfredos-iron-work.onrender.com', "https://alfredosironwork.com"],
     credentials: true,
     methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD', 'DELETE']
 
