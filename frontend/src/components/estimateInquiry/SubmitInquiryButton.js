@@ -1,26 +1,11 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { resetButton, selectButtonDisplay, selectEmailStatus } from "../../slices/submitInquirySlice";
+import React from "react";
+import { useSelector } from "react-redux";
+import { selectButtonDisplay } from "../../slices/submitInquirySlice";
 
 export const SubmitInquiryButton = () => {
     const buttonData = useSelector(selectButtonDisplay);
     const {loadingImgDisplay, textDisplay, successTextDisplay, failureTextDisplay} = buttonData
-    const {emailStatus} = useSelector(selectEmailStatus)
-    const dispatch = useDispatch()
-    useEffect(() => {
-        let timer
-        if (emailStatus === 'fulfilled' || emailStatus === 'failed') {
-            timer = setTimeout(() => {
-                dispatch(resetButton())
-            }, 3000)
-        }
 
-        return () => {
-            if (timer) {
-                clearTimeout(timer)
-            }
-        }
-    })
 
     return (
         <button type="submit">

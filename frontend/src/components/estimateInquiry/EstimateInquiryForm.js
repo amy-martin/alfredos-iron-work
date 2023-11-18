@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { SubmitInquiryButton } from "./SubmitInquiryButton";
 import { useDispatch, useSelector } from "react-redux";
-import { selectEmailStatus, sendEmail } from "../../slices/submitInquirySlice";
+import { resetButton, selectEmailStatus, sendEmail } from "../../slices/submitInquirySlice";
 import { changeInput, resetInputs, selectFormData } from "../../slices/formDataSlice";
 
 
@@ -17,6 +17,20 @@ export const EstimateInquiryForm = () => {
         }
     }, [emailStatus]);
 
+    useEffect(() => {
+        let timer
+        if (emailStatus === 'fulfilled' || emailStatus === 'failed') {
+            timer = setTimeout(() => {
+                dispatch(resetButton())
+            }, 3000)
+        }
+
+        return () => {
+            if (timer) {
+                clearTimeout(timer)
+            }
+        }
+    })
 
     const handleChange = (e) => {
         e.preventDefault();
