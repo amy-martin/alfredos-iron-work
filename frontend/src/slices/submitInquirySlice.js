@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { serverAddress } from "../App";
 
-export const sendEmail = createAsyncThunk('button/sendEmail', async(formData, thunkAPI) => {
+export const sendEmail = createAsyncThunk('button/sendEmail', async(formData) => {
 
     try {
         const options = {
@@ -16,6 +16,7 @@ export const sendEmail = createAsyncThunk('button/sendEmail', async(formData, th
                 formData
             })
         }
+        
         await fetch(`${serverAddress}/submit-inquiry`, options)
     } catch (e) {
         throw e
@@ -24,43 +25,45 @@ export const sendEmail = createAsyncThunk('button/sendEmail', async(formData, th
 }) 
 
 const submitInquirySlice = createSlice({
-    name: 'button',
+    name: 'inquiry',
     initialState: {
-        status: 'idle',
-        loadingImgDisplay: 'none',
-        textDisplay: 'flex',
-        successTextDisplay: 'none',
-        failureTextDisplay: 'none',
-        error: null
+        emailStatus: 'idle',
+        error: null,
+        buttonDisplay: {
+            loadingImgDisplay: 'none',
+            textDisplay: 'flex',
+            successTextDisplay: 'none',
+            failureTextDisplay: 'none',
+        }
     },
     reducers: {
         resetButton: state => {
-            state.status = 'idle';
-            state.loadingImgDisplay = 'none';
-            state.textDisplay = 'flex';
-            state.successTextDisplay= 'none';
-            state.failureTextDisplay = 'none';
+            state.emailStatus = 'idle';
+            state.buttonDisplay.loadingImgDisplay = 'none';
+            state.buttonDisplay.textDisplay = 'flex';
+            state.buttonDisplay.successTextDisplay= 'none';
+            state.buttonDisplay.failureTextDisplay = 'none';
             state.error = null
         }
     },
     extraReducers: (builder) => {
         builder
             .addCase(sendEmail.pending, (state, action) => {
-                state.status = 'loading';
-                state.loadingImgDisplay = 'flex';
-                state.textDisplay = 'none';
+                state.emailStatus = 'loading';
+                state.buttonDisplay.loadingImgDisplay = 'flex';
+                state.buttonDisplay.textDisplay = 'none';
             })
             .addCase(sendEmail.fulfilled, (state, action) => {
-                state.status = 'fulfilled';
-                state.loadingImgDisplay = 'none';
-                state.successTextDisplay = 'flex';
+                state.emailStatus = 'fulfilled';
+                state.buttonDisplay.loadingImgDisplay = 'none';
+                state.buttonDisplay.successTextDisplay = 'flex';
             })
             .addCase(sendEmail.rejected, (state, action) => {
-                state.loading = 'failed';
+                state.emailStatus = 'failed';
                 state.error = action.error.message;
-                state.failureTextDisplay = 'flex';
-                state.textDisplay = 'none';
-                state.loadingImgDisplay = 'none';
+                state.buttonDisplay.failureTextDisplay = 'flex';
+                state.buttonDisplay.textDisplay = 'none';
+                state.buttonDisplay.loadingImgDisplay = 'none';
             })
     }
 });
@@ -68,5 +71,6 @@ const submitInquirySlice = createSlice({
   
 
 export const {resetButton} = submitInquirySlice.actions;
-export const selectButtonDisplay = state => state.button;
+export const selectButtonDisplay = state => state.inquiry.buttonDisplay;
+export const selectEmailStatus = state => state.inquiry.emailStatus
 export default submitInquirySlice.reducer

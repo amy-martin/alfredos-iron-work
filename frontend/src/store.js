@@ -1,15 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
 import submitInquiryReducer from "./slices/submitInquirySlice";
-import flashReducer from "./slices/flashSlice";
 import navSidebarReducer from "./slices/navSidebarSlice";
 import galleryReducer from "./slices/gallerySlice";
+import formDataReducer from "./slices/formDataSlice";
 
 const store = configureStore({
     reducer: {
-        button: submitInquiryReducer,
-        flash: flashReducer,
+        inquiry: submitInquiryReducer,
         navSidebar: navSidebarReducer,
-        gallery: galleryReducer
+        gallery: galleryReducer,
+        formData: formDataReducer
     }
 })
 

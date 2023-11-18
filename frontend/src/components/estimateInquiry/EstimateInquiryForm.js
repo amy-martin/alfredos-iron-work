@@ -1,31 +1,28 @@
-import React, { useState } from "react";
-import { serverAddress } from "../../App";
-import { Flash } from "./flashComponents/Flash";
+import React, { useEffect } from "react";
 import { SubmitInquiryButton } from "./SubmitInquiryButton";
-import { useDispatch } from "react-redux";
-import { reset, sendEmail, setToLoading } from "../../slices/submitInquirySlice";
-import { setFlash } from "../../slices/flashSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { selectEmailStatus, sendEmail } from "../../slices/submitInquirySlice";
+import { changeInput, resetInputs, selectFormData } from "../../slices/formDataSlice";
 
 
 export const EstimateInquiryForm = () => {
     const dispatch = useDispatch()
-    // const [submitButtonContent, setSubmitButtonContent] = useState('Send Inquiry')
-    // const [displayFlash, setDisplayFlash] = useState(false);
-    // const [flashMessage, setFlashMessage] = useState()
-    const [formData, setFormData] = useState({
-        name: '',
-        phone: '',
-        email: '',
-        service: '',
-        additionalDetails: '',
-    });
+    const emailStatus = useSelector(selectEmailStatus)
+    const formData = useSelector(selectFormData)
+
+
+    useEffect(() => {
+        if (emailStatus === 'fulfilled') {
+            dispatch(resetInputs())
+        }
+    }, [emailStatus]);
+
+
     const handleChange = (e) => {
         e.preventDefault();
-        const { name, value } = e.target;
-        setFormData({
-          ...formData,
-          [name]: value,
-        });
+
+        const { name, value } = e.target
+        dispatch(changeInput({name, value}))
     };
     
     const handleSubmit = async (e) => {
@@ -37,28 +34,26 @@ export const EstimateInquiryForm = () => {
         }
         
 
-        //POSSIBLY ADD LOADING SCREEN MEANTIME EMAIL SENDS AND YOU GET A RESPONSE
     }
 
-    // MAKE THE DUBMIT BUTTON ITS OWN COMPONENT
     return (
             <form className="estimate-inquiry-form" onSubmit={handleSubmit}>
                 <div className="form-elements">
                     <div className="form-element">
                         <label htmlFor='name'>Full Name:</label>
-                        <input type='text' name='name' id='name' required onChange={handleChange} />
+                        <input type='text' name='name' id='name' required onChange={handleChange} value={formData.name}/>
                     </div>
                     <div className="form-element">
                         <label htmlFor='phone'>Phone:</label>
-                        <input type="number" inputMode="numeric" pattern="[0-9]*" name='phone' id='phone' required onChange={handleChange} />
+                        <input type="number" inputMode="numeric" pattern="[0-9]*" name='phone' id='phone' required onChange={handleChange} value={formData.phone}/>
                     </div>
                     <div className="form-element">
                         <label htmlFor='email'>Email:</label>
-                        <input type='email' name='email' id='email' required onChange={handleChange} />
+                    <input type='email' name='email' id='email' required onChange={handleChange} value={formData.email}/>
                     </div>
                     <div className="form-element">
                         <label htmlFor='service'>Service Needed:</label>
-                        <select type='text' name='service' id='service' required onChange={handleChange}>
+                        <select type='text' name='service' id='service' required onChange={handleChange} value={formData.service}>
                             <option disabled selected value="">Select an option</option>
                             <option value="Balcony">Balcony</option>
                             <option value="Railing">Railing</option>
@@ -73,10 +68,9 @@ export const EstimateInquiryForm = () => {
                     </div>
                     <div className="form-element">
                         <label htmlFor='additional-details'>Additional Details:</label>
-                        <textarea type='text' name='additionalDetails' id='additionalDetails' rows='3' cols='50' onChange={handleChange}/>
+                        <textarea type='text' name='additionalDetails' id='additionalDetails' rows='3' cols='50' onChange={handleChange} value={formData.additionalDetails}/>
                     </div>
                 </div>
-                <Flash />
                 <SubmitInquiryButton />
             </form>
 )

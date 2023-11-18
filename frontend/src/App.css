@@ -496,6 +496,7 @@ input, select, textarea {
     color: rgba(43, 58, 85, 0.771);
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 14px;
 }
 
 textarea {
