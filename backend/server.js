@@ -28,7 +28,7 @@ app.post('/submit-inquiry', (req, res) => {
         }  
     })
 
-    const image = '<a href="https://alfredosironwork.com/"><img src="https://live.staticflickr.com/65535/53382880900_e021539815_n.jpg" alt="logo" style="display:block;margin:20px 0 20px 0;width:100px;height:auto;"></a>';
+    const image = '<a href="https://alfredosironwork.com/" style="display:block;width:100px;height:auto;"><img src="https://live.staticflickr.com/65535/53382880900_e021539815_n.jpg" alt="logo" style="display:block;margin:20px 0 20px 0;width:100px;height:auto;"></a>';
 
     const clientMessage = `<p>Hello ${name},</p><p>Your inquiry was received. Thank you for your interest! Below are the details of your inquiry. Please allow one to two days for one of our associates to contact you and schedule a visit.</p><p>Best regards,<br/>Alfredo's Ironwork</p>`;
   
