@@ -27,13 +27,25 @@ app.post('/submit-inquiry', (req, res) => {
             pass: process.env.EMAIL_PASSWORD
         }  
     })
+
+    const image = '<a href="https://alfredosironwork.com/"><img src="https://live.staticflickr.com/65535/53382880900_e021539815_n.jpg" alt="logo" style="display:block;margin:20px 0 20px 0;width:100px;height:auto;"></a>';
+
+    const clientMessage = `<p>Hello ${name},</p><p>Your inquiry was received. Thank you for your interest! Below are the details of your inquiry. Please allow one to two days for one of our associates to contact you and schedule a visit.</p><p>Best regards,<br/>Alfredo's Ironwork</p>`;
+  
+    const inquiryDetails = `<p><strong>Submitted Inquiry:</strong></p><p>Name: ${name}<br/>Phone: ${phone}<br/>Email: ${email}<br/>Service Needed: ${service}<br/>Additional Details: ${additionalDetails}</p>`;
+  
+    const emailHTML = `${clientMessage}${image}${inquiryDetails}`;
+  
     const mailOptions = {
-        from: 'client@alfredosironwork.com',
-        to: 'info@alfredosironwork.com',
-        cc: email,
-        subject: `${name} - Estimate Inquiry Successfully Submitted`,
-        text: `Hello ${name},\n\n\nYour inquiry was received. Thank you for your interest! Please allow one to two days for one of our associates to contact you and schedule a visit.\n\n\nAlfredo's Ironwork\n\n\n--------------------------------------------------------------------------\n\n\nSubmmitted Inquiry:\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nService Needed: ${service}\nAdditional Details: ${additionalDetails}`
-    }
+      from: 'client@alfredosironwork.com',
+      to: 'info@alfredosironwork.com',
+      cc: email,
+      subject: `${name} - Estimate Inquiry Successfully Submitted`,
+      html: emailHTML,
+      text: `Hello ${name},\n\nYour inquiry was received. Thank you for your interest! Below are the details of your inquiry. Please allow one to two days for one of our associates to contact you and schedule a visit.\n\nBest regards,\nAlfredo's Ironwork\n\n\n${'-'.repeat(
+        30
+      )}\n\n\nSubmitted Inquiry:\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nService Needed: ${service}\nAdditional Details: ${additionalDetails}`,
+    };
     transporter.sendMail(mailOptions, (err, info) => {
         if (err) {
             console.error(err);
