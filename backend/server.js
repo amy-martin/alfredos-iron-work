@@ -38,8 +38,8 @@ app.post('/submit-inquiry', (req, res) => {
   
     const mailOptions = {
       from: 'client@alfredosironwork.com',
-      to: 'info@alfredosironwork.com',
-      cc: email,
+      to: email,
+      cc: 'info@alfredosironwork.com',
       subject: `${name} - Estimate Inquiry Successfully Submitted`,
       html: emailHTML,
       text: `Hello ${name},\n\nYour inquiry was received. Thank you for your interest! Below are the details of your inquiry. Please allow one to two days for one of our associates to contact you and schedule a visit.\n\nBest regards,\nAlfredo's Ironwork\n\n\n${'-'.repeat(
